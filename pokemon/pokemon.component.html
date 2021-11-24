@@ -1,0 +1,18 @@
+<h1>POKEMON</h1>
+
+<h2>Buscar pokemon</h2>
+<form #formPokemon="ngForm" name="myForm">
+    <label>Nombre:</label>
+    <input type='text' [(ngModel)]='nombre' name='ngModel' />
+    <input type='button' value='Buscar' (click) = "getPokemonByName()"/>
+</form>
+
+<h2>Caracteristicas del pokemon: </h2>
+<ul *ngFor='let ab of abilities'>
+    <li>{{ab}}</li>
+</ul>
+
+<h2>Seccion de pokemons</h2>
+<ul *ngFor='let p of res'>
+    <li>{{p.name}}</li>
+</ul>
