@@ -7,12 +7,28 @@
     <input type='button' value='Buscar' (click) = "getPokemonByName()"/>
 </form>
 
+<form #formPokemon="ngForm" name="myForm">
+    <label>Ability:</label>
+    <input type='text' [(ngModel)]='ability' name='ngModel' />
+    <input type='button' value='Buscar' (click) = "getPokemonByAbility()"/>
+</form>
+
+<h2>Pokedex</h2>
+<img src="{{pokemonImage}}" alt="imagen del pokemon" />
+<img src="{{pokemonImageEv1}}" alt="imagen del pokemon" />
+
+<h2>Pokemon encontrado por la habilidad: {{ability}} </h2>
+<ul *ngFor='let pokemon of pokemons'>
+    <li>{{pokemon}}</li>
+</ul>
+
+
 <h2>Caracteristicas del pokemon: </h2>
 <ul *ngFor='let ab of abilitie'>
     <li>{{ab}}</li>
 </ul>
 
 <h2>Seccion de pokemons</h2>
-<ul *ngFor='let p of res'>
-    <li>{{p.name}}</li>
+<ul *ngFor='let pokemon of all_pokemons'>
+    <li>{{pokemon.name}}</li>
 </ul>

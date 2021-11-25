@@ -7,12 +7,14 @@ import { routing, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
+import { ArrayComponent } from './array/array.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PokemonComponent
+    PokemonComponent,
+    ArrayComponent
   ],
   imports: [
     BrowserModule,
